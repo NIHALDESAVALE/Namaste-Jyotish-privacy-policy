@@ -15,11 +15,7 @@
             --border-color: #e2e8f0;
             --highlight-bg: #eff6ff;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.7;
@@ -33,7 +29,7 @@
             background-color: var(--bg-card);
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border-color);
         }
         header {
@@ -75,21 +71,10 @@
             margin-top: 20px;
             margin-bottom: 8px;
         }
-        p {
-            margin-bottom: 14px;
-            color: var(--text-muted);
-        }
-        ul {
-            margin-bottom: 16px;
-            padding-left: 24px;
-            color: var(--text-muted);
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        strong {
-            color: var(--text-main);
-        }
+        p { margin-bottom: 14px; color: var(--text-muted); }
+        ul { margin-bottom: 16px; padding-left: 24px; color: var(--text-muted); }
+        li { margin-bottom: 8px; }
+        strong { color: var(--text-main); }
         code {
             background-color: #f1f5f9;
             padding: 2px 6px;
@@ -105,10 +90,7 @@
             border-radius: 0 8px 8px 0;
             margin: 20px 0;
         }
-        .highlight-box p {
-            margin-bottom: 0;
-            color: var(--text-main);
-        }
+        .highlight-box p { margin-bottom: 0; color: var(--text-main); }
         .contact-card {
             background-color: #f8fafc;
             border: 1px solid var(--border-color);
@@ -116,23 +98,12 @@
             padding: 20px;
             margin-top: 24px;
         }
-        .contact-card p {
-            margin-bottom: 6px;
-        }
-        a {
-            color: var(--primary-accent);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+        .contact-card p { margin-bottom: 6px; }
+        a { color: var(--primary-accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
         @media (max-width: 640px) {
-            .container {
-                padding: 24px 18px;
-            }
-            h1 {
-                font-size: 1.6rem;
-            }
+            .container { padding: 24px 18px; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -146,83 +117,71 @@
             <p class="effective-date"><strong>Application Package:</strong> <code>com.aistudio.jyotishai.qzkajh</code></p>
         </header>
 
-        <p><strong>NIHAL VIJAYKUMAR DESAVALE</strong> ("we", "our", or "us") operates the <strong>Namaste Jyotish</strong> mobile application (the "App"). We respect your privacy and are committed to protecting any personal data you enter while using our App.</p>
+        <p><strong>NIHAL VIJAYKUMAR DESAVALE</strong> ("we", "our", or "us") operates the <strong>Namaste Jyotish</strong> mobile application (the "App"). We respect your privacy and are committed to protecting any information processed while using our App.</p>
         
-        <p>This Privacy Policy explains what information we process, how it is stored and protected, how our AI and cloud consultation features operate, and your data protection rights.</p>
+        <div class="highlight-box">
+            <p><strong>No User Sign-In or Account Required:</strong> General users are NOT required to create an account, register, or provide an email, phone number, or login credentials to use Namaste Jyotish. All core features (Kundali generation, Dasha calculations, PDF export, and Astrologer chat) are fully accessible without user registration.</p>
+        </div>
 
-        <h2>1. Information Processing & Core Architecture</h2>
-        <p>Namaste Jyotish is designed with a <strong>privacy-first, offline-capable architecture</strong>. Most astrological calculations—such as Kundali generation (D1 to D60 charts), Bhava Chalit, planetary positions, Vimshottari Dasha calculations, Ashtakavarga, Gochar (transits), Matchmaking (Guna Milan), Vastu direction analysis, and Panchang—are computed 100% locally on your device without transmitting data to external servers.</p>
+        <h2>1. Information Processing & Architecture</h2>
+        <p>Namaste Jyotish is built on a <strong>privacy-first, offline-capable architecture</strong>. Most astrological calculations—such as Kundali generation (D1 to D60 charts), Bhava Chalit, planetary positions, Vimshottari Dasha calculations, Ashtakavarga, Gochar (transits), Matchmaking, Vastu direction analysis, PDF generation, and Panchang—are computed 100% locally on your device.</p>
 
         <h3>A. Birth Details and Kundali Profiles</h3>
         <ul>
-            <li><strong>Data Handled:</strong> Full name, gender, date of birth, time of birth, and place of birth (city, latitude, longitude, and timezone).</li>
+            <li><strong>Data Handled:</strong> Name, gender, date of birth, time of birth, and place of birth.</li>
             <li><strong>Storage Location:</strong> Stored strictly in your device's private on-device local database (Room/SQLite).</li>
-            <li><strong>Access:</strong> We do not have access to your saved local Kundalis or private profiles. This data remains on your physical device unless you explicitly share a Kundali summary during an Astrologer consultation chat.</li>
+            <li><strong>Access:</strong> We do not have access to your saved local Kundalis or private profiles. This data remains on your physical device.</li>
         </ul>
 
-        <h3>B. Artificial Intelligence (AI) Features & Gemini API</h3>
-        <p>The App features Vedic astrological analysis and chat interpretation powered by Google Gemini AI / Firebase AI Logic.</p>
+        <h3>B. Astrologer Directory & Live Consultation Chat</h3>
         <ul>
-            <li><strong>What is Sent:</strong> When you submit a question in the "Namaste Jyotish" AI tab or request an AI Vedic synthesis, only the specific astrological planetary context and your query are sent securely via encrypted HTTPS to Google AI services for generating the interpretation.</li>
-            <li><strong>No Model Training:</strong> Your private astrological questions and charts are processed solely to provide real-time responses and are not used to train foundational AI models without your authorization.</li>
-            <li><strong>Data Transmission:</strong> All AI requests are transmitted via TLS 1.3 encryption.</li>
+            <li><strong>Direct Chat for Users:</strong> Users can initiate consultation chat with astrologers directly without creating an account or signing in.</li>
+            <li><strong>Cloud Transmission (Firebase Firestore):</strong> The consultation messages and the astrological summary you choose to share are transmitted securely via Google Cloud Firebase Firestore so the astrologer can read and respond.</li>
+            <li><strong>Astrologer Portal:</strong> Only authorized astrologers log in using their assigned portal credentials to answer queries.</li>
         </ul>
 
-        <h3>C. Palmistry (Hastrekha) Analysis & Media Handling</h3>
+        <h3>C. PDF Export & Document Generation</h3>
+        <p>The App allows you to generate and export comprehensive Vedic Kundali reports as high-resolution PDF documents. These documents are compiled locally on your device and can be shared or saved via standard Android system share intents under your direct control.</p>
+
+        <h3>D. Palmistry (Hastrekha) Analysis & Media Handling</h3>
         <ul>
             <li><strong>Zero Camera Permission:</strong> The App does <strong>NOT</strong> request or use <code>android.permission.CAMERA</code>.</li>
             <li><strong>Zero Broad Storage Permissions:</strong> The App does <strong>NOT</strong> request <code>READ_EXTERNAL_STORAGE</code> or <code>READ_MEDIA_IMAGES</code>.</li>
-            <li><strong>Secure Photo Picker:</strong> When you choose to analyze palm lines, the App uses Android's privacy-preserving system <strong>Photo Picker</strong> (<code>ActivityResultContracts.PickVisualMedia</code>). The App only receives temporary access to the specific image you manually select.</li>
-            <li><strong>Image Usage:</strong> Selected palm images are used solely to analyze hand lines and are never used for facial recognition, biometric identity tracking, or advertising.</li>
+            <li><strong>Privacy-Preserving Photo Picker:</strong> When analyzing palm lines, the App uses Android's modern <strong>Photo Picker</strong> (<code>ActivityResultContracts.PickVisualMedia</code>). The App only receives temporary access to the specific photo you manually select.</li>
         </ul>
 
-        <h3>D. Astrologer Directory & Cloud Consultation Chat</h3>
-        <p>When you choose to consult with verified astrologers inside the App:</p>
-        <ul>
-            <li><strong>Authentication:</strong> Users and astrologers authenticate securely via Google Sign-In using the Android Credential Manager API. We receive standard Google profile identifiers (such as your display name, email address, and profile photo) strictly for account verification.</li>
-            <li><strong>Cloud Storage (Firebase Firestore):</strong> Chat messages, consultation history, and any Kundali summary you deliberately attach to a chat are stored securely in Google Cloud Firebase Firestore.</li>
-            <li><strong>Access Control:</strong> Secure Firestore security rules enforce that only the specific user and the astrologer involved in the consultation session can read or write messages within that consultation channel.</li>
-        </ul>
+        <h3>E. Artificial Intelligence (AI) Features</h3>
+        <p>The App features Vedic astrological analysis powered by Google Gemini AI / Firebase AI Logic. When you ask a question in the "Namaste Jyotish" AI tab, only the specific astrological planetary context and your question are transmitted securely via encrypted HTTPS to generate the reading. Your data is not used to train foundational AI models without consent.</p>
 
         <h2>2. Device Permissions Disclosed</h2>
         <p>The App requests only the minimum permissions necessary to function:</p>
         <ul>
-            <li><strong>Internet Access (<code>android.permission.INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>):</strong> Required to fetch AI astrological interpretations, sync cloud astrologer consultations, and verify network connectivity.</li>
-            <li><strong>Push Notifications (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> Optional on Android 13+. Used only if you enable notifications for astrologer consultation replies or daily Panchang updates. You can revoke this permission anytime in your system settings.</li>
-            <li><strong>Vibration (<code>android.permission.VIBRATE</code>):</strong> Used solely to provide brief haptic feedback during interactive tools, such as the Vastu compass and wheel alignments.</li>
-            <li><strong>Google Play Billing (<code>com.android.vending.BILLING</code>):</strong> Used to process optional in-app purchases or premium consultation tokens via Google Play's official billing system.</li>
+            <li><strong>Internet Access (<code>android.permission.INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>):</strong> Required to fetch AI astrological interpretations, sync live astrologer consultations, and verify network connectivity.</li>
+            <li><strong>Push Notifications (<code>android.permission.POST_NOTIFICATIONS</code>):</strong> Optional on Android 13+. Used only if you choose to receive notifications when an astrologer replies to your chat.</li>
+            <li><strong>Vibration (<code>android.permission.VIBRATE</code>):</strong> Used solely to provide brief haptic feedback during interactive tools, such as the Vastu compass.</li>
+            <li><strong>Google Play Billing (<code>com.android.vending.BILLING</code>):</strong> Used to process optional in-app purchases or consultation tokens via Google Play's official billing system.</li>
         </ul>
-        <div class="highlight-box">
-            <p><strong>Note:</strong> We do NOT access your Contacts, Call Logs, SMS, precise GPS location, Camera, or general device storage.</p>
-        </div>
 
         <h2>3. In-App Purchases & Payments</h2>
-        <p>All financial transactions are handled exclusively through the <strong>Google Play In-App Billing</strong> system. We do not collect, process, or store credit card numbers, bank accounts, or financial payment credentials. All billing data is governed by Google Play's Terms of Service and Privacy Policy.</p>
+        <p>All financial transactions are handled exclusively through the <strong>Google Play In-App Billing</strong> system. We do not collect, process, or store credit card numbers, bank accounts, or financial payment credentials.</p>
 
         <h2>4. Data Retention, Control & Deletion</h2>
-        <p>We respect your right to control your personal information:</p>
         <ul>
             <li><strong>Local Data:</strong> You can delete any saved Kundali profile at any time directly within the App via the "Saved Kundalis" screen, or by clearing the App's data in Android Settings.</li>
-            <li><strong>Cloud Data Deletion:</strong> If you have participated in an Astrologer consultation and wish to permanently delete your cloud account, messages, or consultation records, you may email us at <a href="mailto:nickdesavale@gmail.com">nickdesavale@gmail.com</a> with the subject line <em>"Data Deletion Request"</em>. We will process and delete your cloud records within 30 days in compliance with Google Play Developer Policies.</li>
+            <li><strong>Chat Data Deletion:</strong> You can clear your chat history inside the chat screen. If you wish to request deletion of any cloud chat session, you may email us at <a href="mailto:nickdesavale@gmail.com">nickdesavale@gmail.com</a> with the subject line <em>"Data Deletion Request"</em>.</li>
         </ul>
 
         <h2>5. Third-Party Services</h2>
-        <p>The App integrates with reputable third-party service providers who operate under industry-standard security and compliance frameworks:</p>
         <ul>
-            <li><strong>Google Play Services:</strong> Core app distribution, safety verification, and in-app billing.</li>
-            <li><strong>Google Cloud &amp; Firebase (Firestore &amp; Auth):</strong> Secure database and user authentication. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>)</li>
-            <li><strong>Google Gemini AI / AI Studio:</strong> Natural language astrological interpretation engine. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+            <li><strong>Google Play Services:</strong> App distribution, security verification, and in-app billing.</li>
+            <li><strong>Google Cloud &amp; Firebase (Firestore):</strong> Secure cloud messaging database. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>)</li>
+            <li><strong>Google Gemini AI:</strong> Natural language astrological interpretation engine. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
         </ul>
 
         <h2>6. Children's Privacy</h2>
-        <p>Our App is not intended for use by children under the age of 13. We do not knowingly collect personal identifiable information from children under 13. If you believe that a child under 13 has provided personal data to our cloud services, please contact us immediately, and we will take prompt steps to remove such information.</p>
+        <p>Our App is not directed to children under 13. We do not knowingly collect personal identifiable information from children under 13.</p>
 
-        <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable legal regulations. Any modifications will be posted directly to this URL with an updated "Effective Date". We encourage you to review this page periodically.</p>
-
-        <h2>8. Contact Information</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
-        
+        <h2>7. Contact Information</h2>
         <div class="contact-card">
             <p><strong>Developer:</strong> NIHAL VIJAYKUMAR DESAVALE</p>
             <p><strong>Application:</strong> Namaste Jyotish</p>
